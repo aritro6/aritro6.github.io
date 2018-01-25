@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efbbf372-5e25-4143-97a8-0e9f6010b819" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/images/header-bg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/images/portfolio/header.JPG" afterPath="$PROJECT_DIR$/images/header.JPG" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="467" column="32" lean-forward="true" selection-start-line="467" selection-start-column="32" selection-end-line="467" selection-end-column="32" />
+            <state relative-caret-position="358">
+              <caret line="479" column="29" lean-forward="true" selection-start-line="479" selection-start-column="29" selection-end-line="479" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -125,6 +124,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images/portfolio" />
     </key>
@@ -275,8 +277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="467" column="32" lean-forward="true" selection-start-line="467" selection-start-column="32" selection-end-line="467" selection-end-column="32" />
+        <state relative-caret-position="358">
+          <caret line="479" column="29" lean-forward="true" selection-start-line="479" selection-start-column="29" selection-end-line="479" selection-end-column="29" />
           <folding />
         </state>
       </provider>
