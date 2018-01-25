@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efbbf372-5e25-4143-97a8-0e9f6010b819" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/images/portfolio/header.JPG" afterPath="$PROJECT_DIR$/images/header.JPG" />
-    </list>
+    <list default="true" id="efbbf372-5e25-4143-97a8-0e9f6010b819" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,10 +34,17 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="479" column="29" lean-forward="true" selection-start-line="479" selection-start-column="29" selection-end-line="479" selection-end-column="29" />
+            <state relative-caret-position="146">
+              <caret line="465" column="69" lean-forward="true" selection-start-line="465" selection-start-column="69" selection-end-line="465" selection-end-column="69" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.JPG" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/header.JPG">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -275,10 +280,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/header.JPG">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="479" column="29" lean-forward="true" selection-start-line="479" selection-start-column="29" selection-end-line="479" selection-end-column="29" />
+        <state relative-caret-position="146">
+          <caret line="465" column="69" lean-forward="true" selection-start-line="465" selection-start-column="69" selection-end-line="465" selection-end-column="69" />
           <folding />
         </state>
       </provider>
