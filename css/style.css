@@ -578,7 +578,7 @@ textarea::-ms-input-placeholder
 /*For Experience Section*/
 
 .experience{
-    background: url(../images/city.jpg) no-repeat center top fixed;
+    background: url(../images/AZ2.jpg) no-repeat center top fixed;
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -666,11 +666,12 @@ textarea::-ms-input-placeholder
 
 .contact{
     background: url(../images/contact2.jpg) no-repeat center top fixed;
+    height: 642px;
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
-    width: 100%;
+    width: 1200px;
     overflow: hidden;
 }
 
