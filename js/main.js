@@ -1,130 +1,140 @@
-"use strict";
-
-
-jQuery(document).ready(function ($) {
-
-	$(window).load(function () {
-		$(".loaded").fadeOut();
-		$(".preloader").delay(1000).fadeOut("slow");
-	});
-    /*---------------------------------------------*
-     * Mobile menu
-     ---------------------------------------------*/
-    $('#navbar-collapse').find('a[href*=#]:not([href=#])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html,body').animate({
-                    scrollTop: (target.offset().top - 40)
-                }, 1000);
-                if ($('.navbar-toggle').css('display') != 'none') {
-                    $(this).parents('.container').find(".navbar-toggle").trigger("click");
-                }
-                return false;
-            }
-        }
-    });
-
-    /*---------------------------------------------*
-     * Portfolio Pop Up Animation
-     ---------------------------------------------*/
-
-    $('.portfolio-img').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        }
-    });
-
-    /*---------------------------------------------*
-     * Menu Section
-     ---------------------------------------------*/
-
-    $('.cd-menu-trigger').on('click', function (event) {
-        event.preventDefault();
-        $('.home-main-content').addClass('move-out');
-        $('#main-nav').addClass('is-visible');
-        $('.cd-shadow-layer').addClass('is-visible');
-    });
-    //close menu
-    $('.cd-close-menu').on('click', function (event) {
-        event.preventDefault();
-        $('.home-main-content').removeClass('move-out');
-        $('#main-nav').removeClass('is-visible');
-        $('.cd-shadow-layer').removeClass('is-visible');
-    });
-
-    //clipped image - blur effect
-    set_clip_property();
-    $(window).on('resize', function () {
-        set_clip_property();
-    });
-
-    function set_clip_property() {
-        var $header_height = $('.cd-header').height(),
-                $window_height = $(window).height(),
-                $header_top = $window_height - $header_height,
-                $window_width = $(window).width();
-        $('.cd-blurred-bg').css('clip', 'rect(' + $header_top + 'px, ' + $window_width + 'px, ' + $window_height + 'px, 0px)');
-    }
-    $('#main-nav a[href^="#"]').on('click', function (event) {
-        event.preventDefault();
-        var target = $(this.hash);
-        $('.home-main-content').removeClass('move-out');
-        $('#main-nav').removeClass('is-visible');
-        $('.cd-shadow-layer').removeClass('is-visible');
-        $('body,html').animate(
-                {'scrollTop': target.offset().top},
-        900
-                );
-    });
-
-
-    /*---------------------------------------------*
-     * STICKY scroll
-     ---------------------------------------------*/
-
-//    $.localScroll();
+/* =================================
+------------------------------------
+	Civic - CV Resume
+	Version: 1.0
+ ------------------------------------ 
+ ====================================*/
 
 
 
-    /*---------------------------------------------*
-     * Counter 
-     ---------------------------------------------*/
-
-//    $('.statistic-counter').counterUp({
-//        delay: 10,
-//        time: 2000
-//    });
+'use strict';
 
 
+$(window).on('load', function() { 
+	/*------------------
+		Preloder
+	--------------------*/
+	$(".loader").fadeOut(); 
+	$("#preloder").delay(400).fadeOut("slow");
 
-
-    /*---------------------------------------------*
-     * WOW
-     ---------------------------------------------*/
-
-//        var wow = new WOW({
-//            mobile: false // trigger animations on mobile devices (default is true)
-//        });
-//        wow.init();
-
-
-    /* ---------------------------------------------------------------------
-     Carousel
-     ---------------------------------------------------------------------= */
-
-//    $('.testimonials').owlCarousel({
-//        responsiveClass: true,
-//        autoplay: false,
-//        items: 1,
-//        loop: true,
-//        dots: true,
-//        autoplayHoverPause: true
-//
-//    });
-
-
-    //End
 });
+
+
+(function($) {
+
+	/*------------------
+		Background set
+	--------------------*/
+	$('.set-bg').each(function() {
+		var bg = $(this).data('setbg');
+		$(this).css('background-image', 'url(' + bg + ')');
+	});
+
+
+	$('.review-slider').owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		items: 1,
+		autoplay: true
+	});
+
+
+
+	$('.progress-bar-style').each(function() {
+		var progress = $(this).data("progress");
+		var prog_width = progress + '%';
+		if (progress <= 100) {
+			$(this).append('<div class="bar-inner" style="width:' + prog_width + '"><span>' + prog_width + '</span></div>');
+		}
+		else {
+			$(this).append('<div class="bar-inner" style="width:100%"><span>' + prog_width + '</span></div>');
+		}
+	});
+
+
+	$('.lan-prog').each(function() {
+		var progress = $(this).data("lanprogesss");
+		var ele      = '<span></span>';
+		var ele_fade = '<span class="fade-ele"></span>';
+		
+		for (var i = 1; i <= 5; i++) {
+			if(i <= progress){
+				$(this).append(ele);
+			} else {
+				$(this).append(ele_fade);
+			}
+		}
+	});
+
+
+	/*------------------
+		Popup
+	--------------------*/
+	$('.portfolio-item .port-pic').magnificPopup({
+		type: 'image',
+		mainClass: 'img-popup-warp',
+		removalDelay: 500,
+	});
+
+
+
+
+if($().circleProgress){
+
+	//Set progress circle 1
+	$("#progress1").circleProgress({
+		value: 0.75,
+		size: 175,
+		thickness: 2,
+		fill: "#40424a",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+	//Set progress circle 2
+	$("#progress2").circleProgress({
+		value: 0.83,
+		size: 175,
+		thickness: 2,
+		fill: "#40424a",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+
+	//Set progress circle white
+	$("#progress3").circleProgress({
+		value: 0.75,
+		size: 175,
+		thickness: 2,
+		fill: "#ffffff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+
+	//Set progress circle white
+	$("#progress4").circleProgress({
+		value: 0.83,
+		size: 175,
+		thickness: 2,
+		fill: "#ffffff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+
+	//Set progress circle skyblue
+	$("#progress5").circleProgress({
+		value: 0.75,
+		size: 175,
+		thickness: 2,
+		fill: "#009fff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+
+	//Set progress circle skyblue
+	$("#progress6").circleProgress({
+		value: 0.83,
+		size: 175,
+		thickness: 2,
+		fill: "#009fff",
+		emptyFill: "rgba(0, 0, 0, 0)"
+	});
+}
+
+})(jQuery);
+
