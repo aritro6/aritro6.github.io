@@ -89,6 +89,16 @@ ol {
 	background: #40424a;
 }
 
+.section-work_experience h2 {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 110px;
+	padding-bottom: 2px;
+	line-height: normal;
+}
+
+
+
 .set-bg {
 	background-repeat: no-repeat;
 	background-size: cover;
