@@ -21,7 +21,7 @@ a {
     transition: .3s;
 }
 
-a:hover,
+a:hover{color: #111111; text-decoration: none; font-weight: none; }
 a:active,
 a:focus {
     color: #EF233C;
@@ -1306,7 +1306,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin: 45px 0;
-    background: #EF233C;
+    background: #ffffff;
 }
 
 .contact .container-fluid {
@@ -1317,7 +1317,7 @@ a:focus {
 .contact .contact-form {
     position: relative;
     padding: 90px 0 90px 45px;
-    background: #EF233C;
+    background: #ffffff;
 }
 
 .contact .contact-form input {
