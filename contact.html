@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Aritro Majumdar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+/* ── CONTACT LAYOUT ── */
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0 4rem;
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  width: 100%;
+}
+
+/* Left — intro */
+.contact-intro {}
+.contact-intro h1 { margin-bottom: 1rem; }
+.contact-intro p {
+  font-size: 1.05rem;
+  color: var(--ink-muted);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* Right — links */
+.contact-links { display: flex; flex-direction: column; gap: 1rem; padding-top: 0.5rem; }
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.contact-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(28,26,23,0.07);
+  border-color: var(--accent-mid);
+}
+
+.ci-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--accent-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.ci-body {}
+.ci-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.15rem;
+}
+.ci-value {
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* Open to section */
+.open-to {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.open-to h3 {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.open-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.open-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.open-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 820px) {
+  .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-page { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Aritro Majumdar</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="agile.html">Agile PM</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="contact-page">
+    <div class="contact-inner">
+
+      <!-- LEFT -->
+      <div class="contact-intro fade-in">
+        <div class="section-label">Contact</div>
+        <h1>Let's<br />talk.</h1>
+        <p>
+          Whether you want to discuss agile work, book a drum lesson, or just introduce yourself — my inbox is open.
+        </p>
+        <p>
+          I'm direct and I respond. Send me an email or connect on LinkedIn and let's figure out if there's something worth building together.
+        </p>
+
+        <div class="open-to">
+          <h3>Currently open to</h3>
+          <div class="open-list">
+            <div class="open-item">Full-time Scrum Master or Agile PM roles</div>
+            <div class="open-item">Contract and consulting engagements</div>
+            <div class="open-item">Drum and piano students (all levels)</div>
+            <div class="open-item">Conversations about products, teams, and process</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="contact-links fade-in">
+        <a href="mailto:me@aritrom.com" class="contact-item">
+          <div class="ci-icon">✉️</div>
+          <div class="ci-body">
+            <div class="ci-label">Email</div>
+            <div class="ci-value">me@aritrom.com</div>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/aritro-majumdar/" target="_blank" rel="noopener" class="contact-item">
+          <div class="ci-icon">💼</div>
+          <div class="ci-body">
+            <div class="ci-label">LinkedIn</div>
+            <div class="ci-value">linkedin.com/in/aritro-majumdar</div>
+          </div>
+        </a>
+
+        <a href="https://www.unblockagency.com/" target="_blank" rel="noopener" class="contact-item">
+          <div class="ci-icon">⚙️</div>
+          <div class="ci-body">
+            <div class="ci-label">Agile Consulting</div>
+            <div class="ci-value">unblockagency.com</div>
+          </div>
+        </a>
+
+        <a href="https://aritro-s-music-school.github.io/" target="_blank" rel="noopener" class="contact-item">
+          <div class="ci-icon">🥁</div>
+          <div class="ci-body">
+            <div class="ci-label">Music School &amp; Lessons</div>
+            <div class="ci-value">aritro-s-music-school.github.io</div>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/aritro6/" target="_blank" rel="noopener" class="contact-item">
+          <div class="ci-icon">📷</div>
+          <div class="ci-body">
+            <div class="ci-label">Instagram</div>
+            <div class="ci-value">@aritro6</div>
+          </div>
+        </a>
+
+        <a href="https://www.facebook.com/aritro.majumdar" target="_blank" rel="noopener" class="contact-item">
+          <div class="ci-icon">📘</div>
+          <div class="ci-body">
+            <div class="ci-label">Facebook</div>
+            <div class="ci-value">facebook.com/aritro.majumdar</div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Aritro Majumdar &nbsp;·&nbsp; Phoenix, AZ &nbsp;·&nbsp;
+    <a href="index.html" style="color:var(--ink-muted);text-decoration:none;">Home</a> &nbsp;·&nbsp;
+    <a href="agile.html" style="color:var(--ink-muted);text-decoration:none;">Agile PM</a> &nbsp;·&nbsp;
+    <a href="music.html" style="color:var(--ink-muted);text-decoration:none;">Music</a>
+  </p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

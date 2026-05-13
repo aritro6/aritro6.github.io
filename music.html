@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Music — Aritro Majumdar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+/* ── PAGE HERO ── */
+.page-hero {
+  padding: 130px 0 4rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 5rem;
+  align-items: end;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  color: var(--ink-muted);
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* Lesson card in hero */
+.lesson-hero-card {
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.lesson-hero-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 20px 20px 0 0;
+}
+.lesson-hero-card .lhc-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.lesson-hero-card h3 {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+.lesson-hero-card p { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.7; margin-bottom: 1.25rem; }
+
+/* ── MUSIC STORY ── */
+.music-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.music-story-text p {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  margin-bottom: 1.3rem;
+}
+.music-story-text p:last-child { margin-bottom: 0; }
+
+/* Music cards on right */
+.music-card-stack { display: flex; flex-direction: column; gap: 1rem; }
+.music-card {
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  transition: transform 0.2s;
+  text-decoration: none;
+  display: block;
+}
+.music-card:hover { transform: translateX(4px); }
+.music-card h4 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+.music-card p { font-size: 0.87rem; color: var(--ink-muted); line-height: 1.65; }
+.music-card .card-link { color: var(--accent); font-weight: 500; text-decoration: none; font-size: 0.87rem; display: inline-block; margin-top: 0.5rem; }
+.music-card .card-link:hover { text-decoration: underline; }
+
+/* ── ERA TIMELINE ── */
+.era-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  border-radius: 18px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.era-item { background: var(--warm-white); padding: 1.6rem; }
+.era-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+.era-item h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.era-item p { font-size: 0.82rem; color: var(--ink-muted); line-height: 1.65; }
+
+/* ── TEACHING SECTION ── */
+.teaching-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.teaching-text p {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+.teaching-text p:last-child { margin-bottom: 0; }
+
+.teaching-details { display: flex; flex-direction: column; gap: 1rem; }
+
+.detail-card {
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+}
+.detail-card h4 {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.detail-card p { font-size: 0.87rem; color: var(--ink-muted); line-height: 1.65; }
+
+/* ── CTA ROW ── */
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+}
+.cta-row p { font-size: 1rem; color: var(--ink-muted); flex: 1; min-width: 200px; }
+
+@media (max-width: 820px) {
+  .page-hero-grid, .music-story-grid, .teaching-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .era-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Aritro Majumdar</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="agile.html">Agile PM</a></li>
+    <li><a href="music.html" class="active">Music</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-wrap">
+  <div class="page-hero">
+    <div class="page-hero-grid">
+      <div>
+        <div class="section-label">Music</div>
+        <h1>Playing &amp;<br />teaching drums.</h1>
+        <p>
+          I started in 4th grade and never really stopped — though I came close. Two decades later I'm gigging at The Nash, teaching at Guitar Center, and still learning what the instrument has to say.
+        </p>
+        <div class="hero-cta">
+          <a href="https://aritro-s-music-school.github.io/" target="_blank" rel="noopener" class="btn-primary">Book a lesson</a>
+          <a href="contact.html" class="btn-secondary">Get in touch</a>
+        </div>
+      </div>
+      <div class="lesson-hero-card">
+        <div class="lhc-label">Currently teaching</div>
+        <h3>Drum &amp; Intro Piano Lessons</h3>
+        <p>Available at Guitar Center (part-time) and independently. All ages and skill levels welcome. Jazz-rooted but open to any style.</p>
+        <a href="https://aritro-s-music-school.github.io/" target="_blank" rel="noopener" class="btn-primary" style="display: inline-flex;">Visit my music school →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MUSIC STORY -->
+<div class="page-wrap">
+  <section>
+    <div class="fade-in">
+      <div class="section-label">The story</div>
+      <h2>Two decades<br /><em>behind the kit.</em></h2>
+    </div>
+    <div class="music-story-grid">
+      <div class="music-story-text fade-in">
+        <div class="rhythm-bar" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <p>
+          I started playing drums in 4th grade. I don't remember choosing it — it just made sense immediately. Middle school gave me concert band and jazz band. High school gave me everything: concert band, jazz band, winter drumline, marching band, percussion ensemble, and steel band. Music was the place where I always felt most like myself.
+        </p>
+        <p>
+          College slowed things down. Life got complicated and I stepped away from the kit for about four years. When I came back, I came back differently — with my own money, my own time, and a much clearer sense of why it mattered to me. I took lessons again, reinvested seriously in my gear, and started showing up to jam sessions at <strong>The Nash</strong> in downtown Phoenix.
+        </p>
+        <div class="pull-quote">
+          Taking that four-year break taught me more about why I play than any lesson could have.
+        </div>
+        <p>
+          The Nash sessions were a turning point. Jazz demands real listening — you can't fake it in a room with other musicians. Every cymbal choice, every brush stroke, every moment of restraint is a conversation. That's where I figured out what kind of player I wanted to be.
+        </p>
+        <p>
+          Now I teach. The same things that made me a better player — listening first, responding with intention, not overcomplicating it — are the same things I try to pass on to students.
+        </p>
+      </div>
+      <div class="music-card-stack fade-in">
+        <div class="music-card">
+          <h4>The Nash — Phoenix Jazz Club</h4>
+          <p>Still active. Jam sessions in downtown Phoenix with some of the city's best players. Jazz at its most honest — improvised, collaborative, in the moment.</p>
+        </div>
+        <div class="music-card">
+          <h4>Guitar Center</h4>
+          <p>Drum and intro piano instructor, part-time and ongoing. I work with students of all ages and skill levels.</p>
+        </div>
+        <div class="music-card">
+          <h4>Private Lessons</h4>
+          <p>Available independently outside of Guitar Center.</p>
+          <a href="https://aritro-s-music-school.github.io/" target="_blank" rel="noopener" class="card-link">Visit my music school →</a>
+        </div>
+        <div class="music-card">
+          <h4>Gear</h4>
+          <p>Sabian devotee. I've put real time into researching cymbals and drum heads — coated vs. clear, warm vs. bright. Happy to talk about any of it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Era timeline -->
+    <div class="era-grid fade-in">
+      <div class="era-item">
+        <div class="era-label">Elementary</div>
+        <h4>Lessons begin</h4>
+        <p>4th grade. First sticks. Something clicked immediately and never un-clicked.</p>
+      </div>
+      <div class="era-item">
+        <div class="era-label">Middle School (6th–8th)</div>
+        <h4>Concert &amp; Jazz Band</h4>
+        <p>First real ensemble experience. Learning to listen, not just play. Jazz band was the spark.</p>
+      </div>
+      <div class="era-item">
+        <div class="era-label">High School</div>
+        <h4>Full immersion</h4>
+        <p>Concert band, jazz band, winter drumline, marching band, percussion ensemble, steel band. All of it.</p>
+      </div>
+      <div class="era-item">
+        <div class="era-label">Now</div>
+        <h4>Playing &amp; Teaching</h4>
+        <p>Jam sessions at The Nash. Instructor at Guitar Center. Private lessons. Still going.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="rule"></div>
+
+<!-- TEACHING -->
+<div class="page-wrap">
+  <section>
+    <div class="fade-in">
+      <div class="section-label">Teaching</div>
+      <h2>How I teach<br /><em>and what we work on.</em></h2>
+    </div>
+    <div class="teaching-grid">
+      <div class="teaching-text fade-in">
+        <p>
+          My approach to teaching is rooted in jazz, which means it starts with listening. Before technique, before speed, before anything — I want students to hear what the music is asking for. That's the foundation everything else is built on.
+        </p>
+        <p>
+          I work with beginners who have never touched a drum, intermediate players who've hit a wall, and anyone in between. I don't have a one-size-fits-all curriculum. Every student gets something built around where they are and where they want to go.
+        </p>
+        <p>
+          I also teach intro piano — enough to understand music theory, find your way around a keyboard, and play something that sounds like music. Same philosophy: feel it first, then formalize it.
+        </p>
+        <p>
+          Lessons available at Guitar Center (ask at the drum counter) and privately through my music school site.
+        </p>
+        <div style="margin-top: 1.5rem;">
+          <a href="https://aritro-s-music-school.github.io/" target="_blank" rel="noopener" class="btn-primary">Book a lesson</a>
+        </div>
+      </div>
+      <div class="teaching-details fade-in">
+        <div class="detail-card">
+          <h4>Fundamentals &amp; technique</h4>
+          <p>Grip, posture, stroke types, rudiments. The stuff that makes everything else possible — taught in context, not in isolation.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Groove &amp; feel</h4>
+          <p>Time, dynamics, space. How to make a groove feel good, not just land on the beat.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Jazz vocabulary</h4>
+          <p>Ride cymbal patterns, brush technique, jazz independence, comping behind a soloist. The language of the tradition.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Reading music</h4>
+          <p>Drum notation, basic chart reading, understanding form. Practical skills for working musicians and serious students.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Gear guidance</h4>
+          <p>What kit to buy, which heads to try, how to tune. I've done the research — happy to save you the trial and error.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="rule"></div>
+
+<!-- CTA -->
+<div class="page-wrap">
+  <div class="cta-row fade-in">
+    <p>Interested in lessons or just want to talk drums? Reach out anytime.</p>
+    <a href="https://aritro-s-music-school.github.io/" target="_blank" rel="noopener" class="btn-primary">Book a lesson</a>
+    <a href="contact.html" class="btn-secondary">Contact me</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Aritro Majumdar &nbsp;·&nbsp; Phoenix, AZ &nbsp;·&nbsp;
+    <a href="index.html" style="color:var(--ink-muted);text-decoration:none;">Home</a> &nbsp;·&nbsp;
+    <a href="agile.html" style="color:var(--ink-muted);text-decoration:none;">Agile PM</a> &nbsp;·&nbsp;
+    <a href="contact.html" style="color:var(--ink-muted);text-decoration:none;">Contact</a>
+  </p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
